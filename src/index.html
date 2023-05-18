@@ -7,6 +7,33 @@
     <title>React From Scratch</title>
   </head>
   <body>
+    <h1>Counter in Vanilla JS</h1>
+    <p>The "+" button counts up. The "-" button counts down.</p>
+    <div id="counter">0</div>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            document.getElementById("counter").innerText = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById("counter").innerText = count;
+        }
+
+        function reset () {
+            // window refresh to lose non-persistent state
+            window.location.reload();
+        }
+
+    </script>
+
+
     <div id="root"></div>
     <script src="./index.js"></script>
   </body>
